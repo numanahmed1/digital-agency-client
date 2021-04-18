@@ -1,0 +1,11 @@
+.dashboard-main{
+    display: flex;
+    flex-direction: row;
+}
+.dashboard-left{
+    flex: 0.2;
+}
+.dashboard-right{
+    border: 1px solid red;
+    flex: 0.8;
+}

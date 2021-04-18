@@ -1,0 +1,55 @@
+.testimonial-card {
+  background-color: white;
+  box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 5%);
+  padding: 25px 15px;
+  transition: all 500ms ease;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+.testimonial-card:hover {
+  background-color: #d00a2b;
+}
+.testimonial-card:hover .testi-icon {
+  color: #ffffff;
+}
+.testimonial-top {
+  display: flex;
+  justify-content: space-between;
+}
+.testimonial-top-left {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-top-left img {
+  height: 70px;
+  border-radius: 100%;
+}
+.testimonial-provider {
+  margin-left: 10px;
+  color: #111;
+}
+.testimonial-card:hover .testimonial-provider {
+  color: #ffffff;
+}
+.testimonial-provider p {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+.testimonial-provider h5 {
+  font-size: 20px;
+}
+.testi-icon {
+  font-family: "Teko", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #d00a2b;
+}
+.testimonial-bottom {
+  font-size: 20px;
+  color: #111;
+  margin-top: 10px;
+}
+.testimonial-card:hover .testimonial-bottom {
+  color: #ffffff;
+}

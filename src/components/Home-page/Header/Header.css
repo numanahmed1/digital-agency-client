@@ -1,0 +1,62 @@
+.header {
+  padding: 20px 0;
+  background-color: #111111;
+}
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 700;
+}
+.logo:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+.logo span {
+  color: #d00a2b;
+}
+.logo span:hover {
+  text-decoration: none;
+}
+.main-nav a {
+  color: white;
+  margin-left: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.main-nav a:hover {
+  color: #d00a2b;
+ 
+}
+.navbar-toggler-icon{
+  background-color: white;
+  border-radius: 5px;
+  font-size: 25px;
+}
+@media (max-width:991px) {
+  .main-nav{
+    margin-top: 10px;
+  }
+  .main-nav a {
+    display: block;
+    padding: 5px 0px 5px 10px;
+    border-bottom: 1px solid #ffffff;
+    color: white;
+    margin-left: 0px;
+   background-color: #d00a2b;
+   
+  }
+  .main-nav a:hover {
+   
+  
+   background-color: #ffffff;
+   
+  }
+  .main-nav a:last-child {
+ 
+    border-bottom: none;
+ 
+  }
+}

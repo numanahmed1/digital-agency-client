@@ -1,0 +1,83 @@
+.banner {
+  height: 550px;
+  display: flex;
+  align-items: center;
+  background-color: #111111;
+  color: white;
+}
+.banner-left-content h1 {
+  font-size: 60px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.banner-left-content p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.banner-btn-1 {
+  background-color: #d00a2b;
+  color: #ffffff;
+  border: 2px solid #d00a2b;
+  border-radius: 5px;
+  padding: 10px 28px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.banner-btn-1:hover {
+  background-color: #ffffff;
+  color: #111111;
+}
+.banner-btn-2 {
+  background-color: #111111;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  padding: 10px 28px;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+.banner-btn-2:hover {
+  background-color: #ffffff;
+  color: #111111;
+}
+.video-icon {
+  height: 400px;
+  background-image: url(../../../images/agency.jpg);
+  background-position: center center;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.video-icon svg{
+  color: #d00a2b;
+}
+
+
+@media (max-width: 768px) {
+  .banner {
+    display: block;
+  }
+  .banner-left-content h1 {
+    font-size: 35px
+  }
+  .banner-btn-1 {
+    display: block;
+  }
+  .banner-btn-2 {
+    display: block;
+    margin-top: 15px;
+    margin-left: 0;
+  }
+  .video-icon {
+    height: 200px;
+    margin-top: 20px;
+  }
+}
