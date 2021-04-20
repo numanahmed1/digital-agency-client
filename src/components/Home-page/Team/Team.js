@@ -36,11 +36,13 @@ const Team = () => {
           <span className="dot-color">.</span>
         </h1>
       </div>
-      <div className="team-main container">
-        <div className="row">
-          {teamData.map((team) => (
-            <TeamCard key={team.id} team={team} />
-          ))}
+      <div className="team-main">
+        <div className="container">
+          <div className="row">
+            {teamData.map((team) => (
+              <TeamCard key={team.id} team={team} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
