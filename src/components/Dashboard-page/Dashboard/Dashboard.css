@@ -46,3 +46,7 @@
   padding: 6px 20px;
   color: white;
 }
+.v-nav-link{
+  display: flex;
+  align-items: center;
+}

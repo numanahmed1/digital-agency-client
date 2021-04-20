@@ -40,6 +40,7 @@ const OrderList = () => {
         <h1>Order List</h1>
       </div>
       <div className="order-list-main">
+        {orderList.length === 0 && <p className="no-order">You didn't purchase any services yet.</p>}
         {isAdmin ? (
           <Table striped bordered hover>
             <thead>

@@ -50,8 +50,13 @@
   display: none;
   color: #d00a2b;
 }
-.spinner{
+.spinner {
   color: #d00a2b;
   margin: auto;
   max-width: 1180px;
+}
+.dash-content-top h1 {
+  font-size: 30px;
+  text-transform: capitalize;
+  font-weight: 600;
 }

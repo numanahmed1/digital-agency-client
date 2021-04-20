@@ -50,13 +50,13 @@ const Dashboard = () => {
         <Router>
           <div className="dashboard-left">
             <div className="vertical-nav">
-              <Link to="/dashboard/order-list">
+              <Link className="v-nav-link" to="/dashboard/order-list">
                 <span className="dashboard-icon">
                   <FontAwesomeIcon icon={faThList} />
                 </span>
                 Order List
               </Link>
-              <Link to="/dashboard/add-review">
+              <Link className="v-nav-link" to="/dashboard/add-review">
                 <span className="dashboard-icon">
                   <FontAwesomeIcon icon={faCommentAlt} />
                 </span>
@@ -65,19 +65,19 @@ const Dashboard = () => {
 
               {isAdmin && (
                 <>
-                  <Link to="/dashboard/add-service">
+                  <Link className="v-nav-link" to="/dashboard/add-service">
                     <span className="dashboard-icon">
                       <FontAwesomeIcon icon={faFolderPlus} />
                     </span>
                     Add Service
                   </Link>
-                  <Link to="/dashboard/add-admin">
+                  <Link className="v-nav-link" to="/dashboard/add-admin">
                     <span className="dashboard-icon">
                       <FontAwesomeIcon icon={faUserPlus} />
                     </span>
                     Add Admin
                   </Link>
-                  <Link to="/dashboard/manage-service">
+                  <Link className="v-nav-link" to="/dashboard/manage-service">
                     <span className="dashboard-icon">
                       <FontAwesomeIcon icon={faEdit} />
                     </span>
