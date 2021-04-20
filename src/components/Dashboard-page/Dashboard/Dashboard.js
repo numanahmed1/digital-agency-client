@@ -43,7 +43,7 @@ const Dashboard = () => {
           </Link>
         </div>
         <div className="logged-username">
-          <p>{loggedInUser.username}</p>
+          <p>Welcome, {loggedInUser.username}</p>
         </div>
       </div>
       <div className="dashboard-main">

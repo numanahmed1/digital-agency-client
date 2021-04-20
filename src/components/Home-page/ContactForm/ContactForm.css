@@ -1,0 +1,17 @@
+.contact-form{
+    padding: 30px 0;
+}
+.form-main{
+    padding: 25px 0;
+}
+.custom-control{
+    padding: 25px 10px;
+    display: block;
+  
+}
+@media (max-width: 768px) {
+    .custom-control{
+        margin: 8px ;
+    }
+   
+}

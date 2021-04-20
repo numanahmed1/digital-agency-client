@@ -1,0 +1,51 @@
+.main-footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 0;
+}
+.footer-logo {
+  margin: 15px 0;
+  display: block;
+}
+.footer-text {
+  font-size: 15px;
+  font-weight: 400;
+}
+.social-icons {
+  display: flex;
+  font-size: 35px;
+}
+.social-icons .icon {
+  margin-right: 15px;
+}
+.facebook svg {
+  color: #1877f2;
+}
+.twitter svg {
+  color: #1da1f2;
+}
+.instragram svg {
+  color: #ce1e4f;
+}
+.youtube svg {
+  color: #fe0000;
+}
+.footer-links h3 {
+  margin: 15px 0;
+}
+.footer-links li {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.footer-links li:first-child {
+  margin-top: 0;
+}
+.download-btn img{
+  display: block;
+}
+.download-btn img:last-child{
+  margin-top: 20px;
+}

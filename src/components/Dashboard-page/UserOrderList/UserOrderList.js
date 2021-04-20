@@ -10,9 +10,9 @@ const UserOrderList = ({ order }) => {
       <div className="user-order-card">
         <div className="user-order-card-top">
           <img src={orderInfo.order_service_iconUrl} alt="" />
-          {status === "pending" && <p>Pending</p>}
-          {status === "on-going" && <p>On going</p>}
-          {status === "done" && <p>Done</p>}
+          {status === "pending" && <p className="pending">Pending</p>}
+          {status === "on-going" && <p className="ongoing">On going</p>}
+          {status === "done" && <p className="done">Done</p>}
         </div>
         <div className="user-order-card-bottom">
           <p>{orderInfo.order_service_name}</p>

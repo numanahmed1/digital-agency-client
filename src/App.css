@@ -50,3 +50,8 @@
   display: none;
   color: #d00a2b;
 }
+.spinner{
+  color: #d00a2b;
+  margin: auto;
+  max-width: 1180px;
+}

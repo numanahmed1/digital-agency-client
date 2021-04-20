@@ -1,15 +1,48 @@
-.dashboard-main{
-    display: flex;
-    flex-direction: row;
+.dashboard-main {
+  display: flex;
+  flex-direction: row;
 }
-.dashboard-left{
-    flex: 0.2;
+.dashboard-left {
+  flex: 0.2;
+  background-color: #111;
+  min-height: 90vh;
+  padding-left: 15px;
 }
-.dashboard-right{
-    border: 1px solid red;
-    flex: 0.8;
+.dashboard-right {
+  background-color: #e6d7d7;
+  flex: 0.8;
+  min-height: 90vh;
 }
-.vertical-nav{
-    display: flex;
-    flex-direction: column;
+.vertical-nav {
+  display: flex;
+  flex-direction: column;
+}
+.vertical-nav a {
+  color: white;
+  font-size: 20px;
+}
+.dashboard-icon{
+    font-size: 30px;
+    color: teal;
+    margin-right: 15px;
+}
+.dashboard-to-front {
+  padding: 15px;
+  display: flex;
+  color: white;
+  background-color: #111;
+  justify-content: space-between;
+  align-items: center;
+}
+.logged-username p {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+.btn-visit-front {
+  background-color: #d00a2b;
+  border: 2px solid white;
+  font-size: 16px;
+  padding: 6px 20px;
+  color: white;
 }

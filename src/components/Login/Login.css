@@ -2,7 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 91vh;
+  height: 60vh;
+  background-color: #f9f9f9;
 }
 .sign-btn {
   background-color: #3578e7;

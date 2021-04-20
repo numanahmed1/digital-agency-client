@@ -7,6 +7,7 @@ import Header from "../Home-page/Header/Header";
 import "./Login.css";
 import { userInfoContext } from "../../App";
 import { useHistory, useLocation } from "react-router-dom";
+import Footer from "../Footer/Footer";
 
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
@@ -50,6 +51,7 @@ const Login = () => {
           </button>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

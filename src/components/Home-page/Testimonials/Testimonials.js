@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { Spinner } from "react-bootstrap";
 import TestimonialCard from "../TestimonialCard/TestimonialCard";
 import "./Testimonials.css";
-
 
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -25,12 +25,18 @@ const Testimonials = () => {
       <div className="testimonail-main">
         <div className="container">
           <div className="row">
-            {testimonials.map((testimonial) => (
-              <TestimonialCard
-                key={testimonial._id}
-                testimonial={testimonial}
-              />
-            ))}
+            {testimonials.length === 0 ? (
+              <div className="spinner">
+                <Spinner animation="grow" />
+              </div>
+            ) : (
+              testimonials.map((testimonial) => (
+                <TestimonialCard
+                  key={testimonial._id}
+                  testimonial={testimonial}
+                />
+              ))
+            )}
           </div>
         </div>
       </div>
