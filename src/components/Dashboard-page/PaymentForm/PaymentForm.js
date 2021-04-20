@@ -8,7 +8,6 @@ const PaymentForm = ({ servicePrice, handleOrderPlaced }) => {
   const [paymentSuccess, setPaymentSuccess] = useState("");
   const stripe = useStripe();
   const elements = useElements();
-  const history = useHistory();
 
   const handleSubmit = async (event) => {
     // Block native form submission.
@@ -38,8 +37,6 @@ const PaymentForm = ({ servicePrice, handleOrderPlaced }) => {
       setPaymentError("");
       setPaymentSuccess(paymentMethod.id);
       handleOrderPlaced(paymentMethod.id, paymentMethod.card.brand);
-      const url = "/dashboard/order-list";
-      history.push(url);
     }
   };
 

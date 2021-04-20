@@ -17,13 +17,14 @@ import { userInfoContext } from "../../../App";
 import AddReview from "../AddReview/AddReview";
 import Order from "../Order/Order";
 import NotFound from "../NotFound/NotFound";
+import PrivateRoute from "../../PrivateRoute/PrivateRoute";
 
 const Dashboard = () => {
   const [loggedInUser, setLoggedInUser] = useContext(userInfoContext);
   const [isAdmin, setIsAdmin] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/is-admin", {
+    fetch("https://secure-meadow-94796.herokuapp.com/is-admin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: loggedInUser.email }),
@@ -54,12 +55,6 @@ const Dashboard = () => {
                   <FontAwesomeIcon icon={faThList} />
                 </span>
                 Order List
-              </Link>
-              <Link to="/dashboard/orders">
-                <span className="dashboard-icon">
-                  <FontAwesomeIcon icon={faThList} />
-                </span>
-                Order
               </Link>
               <Link to="/dashboard/add-review">
                 <span className="dashboard-icon">
@@ -94,31 +89,31 @@ const Dashboard = () => {
           </div>
           <div className="dashboard-right">
             <Switch>
-              <Route exact path="/dashboard">
+              <PrivateRoute exact path="/dashboard">
                 <OrderList />
-              </Route>
-              <Route path="/dashboard/order-list">
+              </PrivateRoute>
+              <PrivateRoute path="/dashboard/order-list">
                 <OrderList />
-              </Route>
+              </PrivateRoute>
 
-              <Route path="/dashboard/orders/:serviceId">
+              <PrivateRoute path="/dashboard/orders/:serviceId">
                 <Order />
-              </Route>
+              </PrivateRoute>
+              <PrivateRoute path="/dashboard/add-review">
+                <AddReview />
+              </PrivateRoute>
 
               {isAdmin && (
                 <>
-                  <Route path="/dashboard/add-service">
-                    <AddServices />
-                  </Route>
-                  <Route path="/dashboard/add-admin">
+                  <PrivateRoute path="/dashboard/add-admin">
                     <AddAdmin />
-                  </Route>
-                  <Route path="/dashboard/manage-service">
+                  </PrivateRoute>
+                  <PrivateRoute path="/dashboard/manage-service">
                     <ManageService />
-                  </Route>
-                  <Route path="/dashboard/add-review">
-                    <AddReview />
-                  </Route>
+                  </PrivateRoute>
+                  <PrivateRoute path="/dashboard/add-service">
+                    <AddServices />
+                  </PrivateRoute>
                 </>
               )}
               <Route path="*">

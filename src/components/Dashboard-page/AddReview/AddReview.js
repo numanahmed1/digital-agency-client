@@ -40,7 +40,7 @@ const AddReview = () => {
       imageURL: imgUrl,
     };
     console.log(reviewDetails);
-    fetch("http://localhost:5000/add-review", {
+    fetch("https://secure-meadow-94796.herokuapp.com/add-review", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(reviewDetails),

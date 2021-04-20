@@ -40,7 +40,7 @@ const AddServices = () => {
       iconURL: iconUrl,
     };
 
-    fetch("http://localhost:5000/add-service", {
+    fetch("https://secure-meadow-94796.herokuapp.com/add-service", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(serviceInfo),

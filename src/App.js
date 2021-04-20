@@ -5,6 +5,7 @@ import NotFound from "./components/NotFound/NotFound";
 import { createContext, useState } from "react";
 import "./App.css";
 import Dashboard from "./components/Dashboard-page/Dashboard/Dashboard";
+import PrivateRoute from '../src/components/PrivateRoute/PrivateRoute'
 
 export const userInfoContext = createContext();
 
@@ -20,9 +21,9 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/dashboard">
-           <Dashboard />
-          </Route>
+          <PrivateRoute path="/dashboard">
+            <Dashboard />
+          </PrivateRoute>
           <Route path="*">
             <NotFound />
           </Route>

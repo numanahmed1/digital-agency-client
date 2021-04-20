@@ -16,7 +16,7 @@ const Order = () => {
   } = useForm();
 
   useEffect(() => {
-    const url = `http://localhost:5000/selected-service?id=${serviceId}`;
+    const url = `https://secure-meadow-94796.herokuapp.com/selected-service?id=${serviceId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -30,6 +30,8 @@ const Order = () => {
       shipment_email: data.shipment_email,
       order_service_name: selectedService.serviceName,
       order_service_price: selectedService.servicePrice,
+      order_service_iconUrl: selectedService.iconURL,
+      order_service_text: selectedService.serviceText,
     });
   };
 
@@ -41,11 +43,11 @@ const Order = () => {
         paymentId: id,
         cardType: card,
       },
-      status: "Pending",
+      status: "pending",
       orderTime: new Date(),
     };
 
-    fetch("http://localhost:5000/add-order", {
+    fetch("https://secure-meadow-94796.herokuapp.com/add-order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(orderDetails),

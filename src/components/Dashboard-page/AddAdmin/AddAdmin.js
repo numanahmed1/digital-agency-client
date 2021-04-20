@@ -12,7 +12,7 @@ const AddAdmin = () => {
     const newEmail = {
       adminEmail: data.adminEmail
     };
-    fetch("http://localhost:5000/add-email", {
+    fetch("https://secure-meadow-94796.herokuapp.com/add-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newEmail),

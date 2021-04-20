@@ -5,13 +5,15 @@ import "./TableRow.css";
 
 const TableRow = ({ service, index }) => {
   const { serviceName, serviceText, servicePrice, _id } = service;
-  const handleDelete = (id) => {
-    fetch(`http://localhost:5000/delete-service/${id}`, {
+  const handleDelete = (event, id) => {
+    fetch(`https://secure-meadow-94796.herokuapp.com/delete-service/${id}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(result);
+        if (result) {
+          event.target.parentNode.style.display= "none";
+        }
       });
   };
   return (
@@ -21,7 +23,10 @@ const TableRow = ({ service, index }) => {
       <td>{serviceText}</td>
       <td>{servicePrice}</td>
       <td>
-        <button onClick={() => handleDelete(_id)} className="btn-delete">
+        <button
+          onClick={(event) => handleDelete(event, _id)}
+          className="btn-delete"
+        >
           <FontAwesomeIcon icon={faTrashAlt} />
         </button>
       </td>

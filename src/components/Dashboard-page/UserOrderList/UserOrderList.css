@@ -1,0 +1,7 @@
+.user-order-card-top {
+  display: flex;
+  justify-content: space-between;
+}
+.user-order-card-top img {
+  height: 70px;
+}

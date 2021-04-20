@@ -5,7 +5,7 @@ import TableRow from "../TableRow/TableRow";
 const ManageService = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://secure-meadow-94796.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -28,7 +28,7 @@ const ManageService = () => {
           <tbody>
             {services.length === 0 ? (
               <tr>
-                <td className="text-center" colSpan="4">
+                <td className="text-center" colSpan="5">
                   Loading...
                 </td>
               </tr>
