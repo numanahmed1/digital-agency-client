@@ -18,8 +18,8 @@ const Banner = () => {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi,
                 harum.
               </p>
-              <button className="banner-btn-1">Book a Service</button>
-              <button className="banner-btn-2">Learn More</button>
+              <button className="custom-btn-1">Book a Service</button>
+              <button className="custom-btn-2">Learn More</button>
             </div>
           </div>
           <div className="col-md-6">

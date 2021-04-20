@@ -16,3 +16,37 @@
   padding: 10px 0;
   color: #d00a2b;
 }
+.custom-btn-3 {
+  background-color: #d00a2b;
+  color: #ffffff;
+  border: 2px solid #d00a2b;
+  border-radius: 5px;
+  padding: 8px 28px;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: block;
+  margin: 10px 0;
+}
+.custom-btn-3:hover {
+  background-color: #e9e0e0;
+  color: #111111;
+}
+.custom-submit-btn {
+  display: flex;
+  align-items: center;
+}
+#success {
+  font-size: 16px;
+  color: green;
+  margin-left: 5px;
+  margin-bottom: 0;
+  display: none;
+}
+.custom-form-control {
+  display: block;
+  padding: 0.375rem 0;
+}
+#loading {
+  display: none;
+  color: #d00a2b;
+}

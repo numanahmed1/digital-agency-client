@@ -1,34 +1,18 @@
-import React from "react";
-import UI from "../../../images/ui.png";
-import APP from "../../../images/app.png";
-import CONTENT from "../../../images/write.png";
-import DIGITAL from "../../../images/digital-marketing.png";
+import React, { useEffect, useState } from "react";
 import "./Services.css";
 import ServiceCard from "../ServiceCard/ServiceCard";
 
-const servicesData = [
-  {
-    name: "UI / UX Designing",
-    icon: UI,
-    price: 230,
-  },
-  {
-    name: "App Development",
-    icon: APP,
-    price: 530,
-  },
-  {
-    name: "SEO & Content Writing",
-    icon: CONTENT,
-    price: 430,
-  },
-  {
-    name: "Digital Marketing",
-    icon: DIGITAL,
-    price: 630,
-  },
-];
 const Services = () => {
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/services")
+      .then((res) => res.json())
+      .then((data) => {
+        setServices(data);
+      });
+  }, []);
+
   return (
     <section className="services">
       <div className="common-title">
@@ -41,8 +25,8 @@ const Services = () => {
 
       <div className="container service-main">
         <div className="row">
-          {servicesData.map((service) => (
-            <ServiceCard service={service} />
+          {services.map((service) => (
+            <ServiceCard key={service._id} service={service} />
           ))}
         </div>
       </div>

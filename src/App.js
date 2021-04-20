@@ -4,7 +4,7 @@ import Login from "./components/Login/Login";
 import NotFound from "./components/NotFound/NotFound";
 import { createContext, useState } from "react";
 import "./App.css";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./components/Dashboard-page/Dashboard/Dashboard";
 
 export const userInfoContext = createContext();
 
@@ -13,7 +13,6 @@ function App() {
   return (
     <userInfoContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
-        <h3>{loggedInUser.username}</h3>
         <Switch>
           <Route exact path="/">
             <Home />

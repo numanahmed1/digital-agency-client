@@ -2,16 +2,16 @@ import React from "react";
 import "./TestimonialCard.css";
 
 const TestimonialCard = ({ testimonial }) => {
-  const { name, position, img, text } = testimonial;
+  const { reviewerName, reviewerPosition, imageURL, reviewText } = testimonial;
   return (
     <div className="col-md-6">
       <div className="testimonial-card">
         <div className="testimonial-top">
           <div className="testimonial-top-left">
-            <img src={img} alt="" />
+            <img src={imageURL} alt="" />
             <div className="testimonial-provider">
-              <h5>{name}</h5>
-              <p>{position}</p>
+              <h5>{reviewerName}</h5>
+              <p>{reviewerPosition}</p>
             </div>
           </div>
           <div className="testimonial-top-right">
@@ -19,7 +19,7 @@ const TestimonialCard = ({ testimonial }) => {
           </div>
         </div>
         <div className="testimonial-bottom">
-          <p>{text}</p>
+          <p>{reviewText}</p>
         </div>
       </div>
     </div>

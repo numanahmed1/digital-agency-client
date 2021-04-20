@@ -16,7 +16,7 @@
   margin-top: 15px;
   margin-bottom: 20px;
 }
-.banner-btn-1 {
+.custom-btn-1 {
   background-color: #d00a2b;
   color: #ffffff;
   border: 2px solid #d00a2b;
@@ -25,11 +25,11 @@
   font-size: 20px;
   text-transform: uppercase;
 }
-.banner-btn-1:hover {
+.custom-btn-1:hover {
   background-color: #ffffff;
   color: #111111;
 }
-.banner-btn-2 {
+.custom-btn-2 {
   background-color: #111111;
   color: #ffffff;
   border: 2px solid #ffffff;
@@ -39,7 +39,7 @@
   text-transform: uppercase;
   margin-left: 20px;
 }
-.banner-btn-2:hover {
+.custom-btn-2:hover {
   background-color: #ffffff;
   color: #111111;
 }
@@ -56,17 +56,16 @@
   cursor: pointer;
   border-radius: 5px;
 }
-.video-icon svg{
+.video-icon svg {
   color: #d00a2b;
 }
-
 
 @media (max-width: 768px) {
   .banner {
     display: block;
   }
   .banner-left-content h1 {
-    font-size: 35px
+    font-size: 35px;
   }
   .banner-btn-1 {
     display: block;

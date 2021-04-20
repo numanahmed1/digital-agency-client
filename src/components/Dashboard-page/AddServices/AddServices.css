@@ -1,0 +1,7 @@
+.dash-content-top {
+  display: flex;
+  justify-content: space-between;
+}
+.serviceIcon {
+  display: flex;
+}

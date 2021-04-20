@@ -9,3 +9,7 @@
     border: 1px solid red;
     flex: 0.8;
 }
+.vertical-nav{
+    display: flex;
+    flex-direction: column;
+}

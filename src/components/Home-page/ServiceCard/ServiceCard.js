@@ -1,18 +1,26 @@
-import React from 'react';
-import './ServiceCard.css'
+import React from "react";
+import { useHistory } from "react-router-dom";
+import "./ServiceCard.css";
 
-const ServiceCard = ({service}) => {
-    const {name, icon, price} = service;
-    return (
-        <div className="col-md-3">
-           <div className="service-card">
-               <img src={icon} alt=""/>
-               <p className="service-name">{name}</p>
-               <p className="service-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-               <p className="service-price">$<strong>{price}</strong></p>
-           </div>
-        </div>
-    );
+const ServiceCard = ({ service }) => {
+  const { _id, serviceName, iconURL, serviceText, servicePrice } = service;
+  const history = useHistory();
+  const handlePurchase = (serviceId) => {
+    const url = `dashboard/orders/${serviceId}`;
+    history.push(url);
+  };
+  return (
+    <div className="col-md-3">
+      <div onClick={() => handlePurchase(_id)} className="service-card">
+        <img src={iconURL} alt="" />
+        <p className="service-name">{serviceName}</p>
+        <p className="service-desc">{serviceText}</p>
+        <p className="service-price">
+          $<strong>{servicePrice}</strong>
+        </p>
+      </div>
+    </div>
+  );
 };
 
 export default ServiceCard;
