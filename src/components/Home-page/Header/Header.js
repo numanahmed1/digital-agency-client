@@ -2,11 +2,23 @@ import React, { useContext } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { userInfoContext } from "../../../App";
+import firebase from "firebase/app";
 import "./Header.css";
 
 const Header = () => {
   const [loggedInUser, setLoggedInUser] = useContext(userInfoContext);
 
+  const handleSignOut = () => {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        setLoggedInUser({});
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
     <header className="header">
       <div className="container">
@@ -23,7 +35,10 @@ const Header = () => {
               <Link to="/">Testimonial</Link>
               <Link to="/contact">Contact</Link>
               {loggedInUser.email ? (
-                <Link to="/dashboard">Dashboard</Link>
+                <>
+                  <Link to="/dashboard">Dashboard</Link>
+                  <Link onClick={handleSignOut}>Sign out</Link>
+                </>
               ) : (
                 <Link to="/login">Login</Link>
               )}

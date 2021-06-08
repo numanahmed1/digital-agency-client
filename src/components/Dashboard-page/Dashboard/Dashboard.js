@@ -56,15 +56,15 @@ const Dashboard = () => {
                 </span>
                 Order List
               </Link>
-              <Link className="v-nav-link" to="/dashboard/add-review">
-                <span className="dashboard-icon">
-                  <FontAwesomeIcon icon={faCommentAlt} />
-                </span>
-                Add Review
-              </Link>
 
               {isAdmin && (
                 <>
+                  <Link className="v-nav-link" to="/dashboard/add-review">
+                    <span className="dashboard-icon">
+                      <FontAwesomeIcon icon={faCommentAlt} />
+                    </span>
+                    Add Review
+                  </Link>
                   <Link className="v-nav-link" to="/dashboard/add-service">
                     <span className="dashboard-icon">
                       <FontAwesomeIcon icon={faFolderPlus} />

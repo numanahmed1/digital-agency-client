@@ -1,0 +1,8 @@
+.service-name-holder {
+  margin-top: 10px;
+  background-color: #008080;
+  color: white;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+}

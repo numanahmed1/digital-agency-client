@@ -31,6 +31,9 @@
   background-color: #e9e0e0;
   color: #111111;
 }
+.custom-btn-3:disabled {
+  background-color: #d00a2ba9;
+}
 .custom-submit-btn {
   display: flex;
   align-items: center;

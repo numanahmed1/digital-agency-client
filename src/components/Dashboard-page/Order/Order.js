@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { userInfoContext } from "../../../App";
 import ProcessPayment from "../PaymentForm/ProcessPayment";
 import { useForm } from "react-hook-form";
+import "./Order.css";
 
 const Order = () => {
   const { serviceId } = useParams();
@@ -95,9 +96,11 @@ const Order = () => {
                   <span className="dot-color">Email is required</span>
                 )}
 
-                <p>{selectedService.serviceName}</p>
+                <p className="service-name-holder">
+                  {selectedService.serviceName}
+                </p>
 
-                <button type="submit" className="custom-btn-3">
+                <button disabled={!selectedService.serviceName} type="submit" className="custom-btn-3">
                   Next
                 </button>
               </form>
@@ -108,7 +111,10 @@ const Order = () => {
               }}
               className="order-payments"
             >
-              <ProcessPayment servicePrice={selectedService.servicePrice} handleOrderPlaced={handleOrderPlaced} />
+              <ProcessPayment
+                servicePrice={selectedService.servicePrice}
+                handleOrderPlaced={handleOrderPlaced}
+              />
             </div>
           </div>
         </div>

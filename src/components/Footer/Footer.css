@@ -17,18 +17,19 @@
 }
 .social-icons .icon {
   margin-right: 15px;
+  cursor: pointer;
 }
 .facebook svg {
-  color: #1877f2;
+  color: #ffffff;
 }
 .twitter svg {
-  color: #1da1f2;
+  color: #ffffff;
 }
 .instragram svg {
-  color: #ce1e4f;
+  color: #ffffff;
 }
 .youtube svg {
-  color: #fe0000;
+  color: #ffffff;
 }
 .footer-links h3 {
   margin: 15px 0;
@@ -43,9 +44,10 @@
 .footer-links li:first-child {
   margin-top: 0;
 }
-.download-btn img{
+.download-btn img {
   display: block;
+  cursor: pointer;
 }
-.download-btn img:last-child{
+.download-btn img:last-child {
   margin-top: 20px;
 }
